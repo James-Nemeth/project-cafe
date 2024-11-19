@@ -78,8 +78,11 @@ header .links {
   padding: 10px 30px;
   background-color: transparent;
   border: 3px solid white;
+}
+.hero .hero-info button a {
   color: white;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 .hero .hero-info button:hover {
   background-color: #82A289;
