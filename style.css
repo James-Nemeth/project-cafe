@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Rammetto-One";
+  src: url(./assests/fonts/RammettoOne-Regular.ttf);
+}
+@font-face {
+  font-family: "OpenSans-Reg";
+  src: url(./assests/fonts/OpenSans-Regular.ttf);
+}
+@font-face {
+  font-family: "OpenSans-Bold";
+  src: url(./assests/fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+  font-family: "OpenSans-Bold-Italic";
+  src: url(./assests/fonts/OpenSans-BoldItalic.ttf);
+}
+h1 {
+  font-size: 3rem;
+  font-family: "Rammetto-One", "Courier New", Courier, monospace;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 12px 20px;
+  width: 100%;
+  height: 10vh;
+}
+header .fa-mug-hot {
+  font-size: 40px;
+  padding-right: 50px;
+  transform: scaleX(-1);
+  color: #FAA196;
+}
+header a {
+  text-decoration: none;
+  color: #404040;
+  gap: 40px;
+  margin: 0px 40px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: "OpenSans-Bold", "Courier New", Courier, monospace;
+  text-transform: uppercase;
+}
+header .links {
+  display: flex;
+  align-items: center;
+}
+
+.hero {
+  height: 85vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.hero .hero-info {
+  background-color: #689572;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "OpenSans-Reg", "Courier New", Courier, monospace;
+}
+.hero .hero-info h3 {
+  font-size: 1.5rem;
+  margin: 30px 0px;
+}
+.hero .hero-info button {
+  padding: 10px 30px;
+  background-color: transparent;
+  border: 3px solid white;
+  color: white;
+  font-size: 1.5rem;
+}
+.hero .hero-info button:hover {
+  background-color: #82A289;
+}
+.hero .hero-img {
+  width: 50%;
+  height: 100%;
+}
+.hero .hero-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-section h1 {
+  color: #FAA196;
+  height: 15vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-section .menu {
+  font-family: "OpenSans-Bold", "Courier New", Courier, monospace;
+}
+.menu-section .menu-container {
+  position: relative;
+}
+.menu-section .menu .toggle-checkbox {
+  display: none;
+}
+.menu-section .menu .menu-button {
+  cursor: pointer;
+  display: flex;
+  margin: auto;
+  padding: 10px;
+  gap: 8px;
+  width: 90%;
+  background-color: #EBC9C4;
+  font-size: larger;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  font-size: 1.4em;
+}
+.menu-section .menu .menu-button i {
+  transition: transform 0.3s ease;
+}
+.menu-section .menu .toggle-checkbox:checked + .menu-button i {
+  transform: rotate(180deg);
+}
+.menu-section .menu .menu-content, .menu-section .menu .drink-container .drink-menu, .menu-section .drink-container .menu .drink-menu, .menu-section .menu .food-container .food-menu, .menu-section .food-container .menu .food-menu {
+  display: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.menu-section .menu .toggle-checkbox:checked ~ .menu-content, .menu-section .menu .drink-container .toggle-checkbox:checked ~ .drink-menu, .menu-section .drink-container .menu .toggle-checkbox:checked ~ .drink-menu, .menu-section .menu .food-container .toggle-checkbox:checked ~ .food-menu, .menu-section .food-container .menu .toggle-checkbox:checked ~ .food-menu {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
+}
+.menu-section .menu .menu-layout {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+  flex: 1;
+}
+.menu-section .menu .menu-layout .items {
+  margin: 20px;
+  background-color: #ffe5e5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  padding: 1rem;
+  height: 70vh;
+  width: 30%;
+}
+.menu-section .menu .menu-layout .items img {
+  width: 400px;
+  height: 400px;
+}
+.menu-section .menu .menu-layout .items h3 {
+  font-size: 1.8rem;
+}
+.menu-section .menu .menu-layout .items div {
+  font-size: 20px;
+}
+.menu-section .menu .menu-layout .items div i {
+  color: #82A289;
+}
+.menu-section .menu .menu-layout .items div p {
+  color: #404040;
+  font-family: "OpenSans-Reg", "Courier New", Courier, monospace;
+}
+.menu-section .food-container .toggle-checkbox:checked ~ .food-menu {
+  height: 155vh;
+}
+.menu-section .drink-container .toggle-checkbox:checked ~ .drink-menu {
+  height: 80vh;
+}
+.review {
+  background-color: #FAA196;
+  height: 90vh;
+}
+.review h1 {
+  color: white;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.review .review-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  padding: 1rem;
+  flex: 1;
+}
+.review .review-container .review-item {
+  margin: auto;
+  margin-top: 40px;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  padding: 1rem;
+  height: 28vh;
+  width: 800px;
+  border: 3px solid white;
+  color: #404040;
+  font-size: 1.5rem;
+  font-family: "OpenSans-Bold-Italic", "Courier New", Courier, monospace;
+}
+.review .review-container .review-item div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-family: "OpenSans-Reg", "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+}
+
+footer {
+  padding: 20px;
+  background-color: #82A289;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 14vh;
+}
+footer div {
+  display: flex;
+  margin: 0px 60px;
+}
+footer div i {
+  margin: 0px 20px;
+  font-size: 40px;
+  transform: scaleX(-1);
+}
+footer div p {
+  display: flex;
+  align-items: center;
+  font-family: "OpenSans-Reg", "Courier New", Courier, monospace;
+}
+
+/*# sourceMappingURL=style.css.map */
